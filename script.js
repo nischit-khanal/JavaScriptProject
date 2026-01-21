@@ -1,8 +1,7 @@
-// Generate random number
+
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 
-// DOM elements
 const input = document.getElementById("guessInput");
 const message = document.getElementById("message");
 const attemptsText = document.getElementById("attempts");
@@ -10,7 +9,7 @@ const attemptsText = document.getElementById("attempts");
 function checkGuess() {
   const guess = Number(input.value);
 
-  // Validation
+
   if (!guess || guess < 1 || guess > 100) {
     message.textContent = "⚠ Please enter a number between 1 and 100";
     message.className = "message";
@@ -37,7 +36,7 @@ function checkGuess() {
   input.focus();
 }
 
-// Reset Game
+
 function resetGame() {
   secretNumber = Math.floor(Math.random() * 100) + 1;
   attempts = 0;
@@ -46,3 +45,4 @@ function resetGame() {
   input.value = "";
   input.focus();
 }
+
